@@ -1,0 +1,162 @@
+//=============================================================
+//会話読み込み処理
+//Author: 	Katou Mizuki
+//=============================================================
+//ポーズ
+//0		仁王立ち
+//1		腰に手を当ててる
+//2		両手を挙げる
+//
+//表情
+//0		笑顔
+//1		驚き
+//2		照れ
+//3		呆然
+//4		怒り
+//5		泣き
+//6		とろけ顔
+//
+//フレーム
+//0		普通
+//
+//モードの種類
+//0			//タイトル
+//1			//トロフィールーム
+//2			//ゲーム01
+//3			//ロケットシーン
+//4			//リザルト
+//5			//エンディング
+//
+//揺れの種類
+//1				//上から下
+//2				//下から上
+//3				//左右両方
+
+
+//=============================================================
+//クリックシーン
+//=============================================================
+BEGIN_CLICK_SCENE_DIALOG
+BEGIN_DIALOG
+POSE = 2
+FACE = 4
+FRAME = 0
+「さっきから」
+SET_BG
+mask_gray.png
+SET_SHAKE
+type = 1
+num = 1
+speed = 0.0 -10.0 0.0
+minus_speed = 0.0 0.2 0.0
+width = 50.0
+END_DIALOG
+
+BEGIN_DIALOG
+POSE = 2
+FACE = 4
+FRAME = 0
+「ガチャガチャ」
+SET_SHAKE
+type = 3
+num = 2
+speed = 20.0 0.0 0.0
+minus_speed = -1.0 0.0 0.0
+width = 100.0
+
+END_DIALOG
+
+BEGIN_DIALOG
+POSE = 2
+FACE = 4
+FRAME = 0
+「ガチャガチャ」
+SET_SHAKE
+type = 3
+num = 2
+speed = 20.0 0.0 0.0
+minus_speed = -1.0 0.0 0.0
+width = 100.0
+END_DIALOG
+
+BEGIN_DIALOG
+POSE = 2
+FACE = 4
+FRAME = 0
+「うるさいねーーーーん！！！！！！！！！#なんでクリック連打しまくるねん！！」
+SET_SHAKE
+type = 1
+num = 15
+speed = 0.0 -30.0 0.0
+minus_speed = 0.0 2.0 0.0
+width = 50.0
+END_DIALOG
+
+BEGIN_DIALOG
+POSE = 1
+FACE = 5
+FRAME = 0
+「ゲーム中に20回もクリックをするだなんて…#そんなに早くゲームを終わりたかったのかい？？」
+END_DIALOG
+
+BEGIN_DIALOG
+POSE = 2
+FACE = 5
+FRAME = 0
+「そんな悲しいこと言わなくてもいいじゃないか……」
+SET_SHAKE
+type = 2
+num = 1
+speed = 0.0 5.0 0.0
+minus_speed = 0.0 -0.03 0.0
+width = 80.0
+END_DIALOG
+
+BEGIN_DIALOG
+POSE = 0
+FACE = 5
+FRAME = 0
+「そうなんだね…#そうか……君はそういう奴だったんだな………」
+SET_SHAKE
+type = 2
+num = 1
+speed = 0.0 5.0 0.0
+minus_speed = 0.0 -0.1 0.0
+width = 80.0
+END_DIALOG
+SET_NEXT_SCENE
+NEXT_SCENE = 4
+
+END_CLICK_SCENE_DIALOG
+
+
+//=============================================================
+//エンドロールシーン
+//=============================================================
+BEGIN_ENDROLL_SCENE_DIALOG
+BEGIN_DIALOG
+POSE = 2
+FACE = 2
+FRAME = 0
+「遊んでくれてありがとう！！」
+SET_SHAKE
+type = 1
+num = 60
+speed = 0.0 -10.0 0.0
+minus_speed = 0.0 0.2 0.0
+width = 50.0
+END_DIALOG
+
+BEGIN_DIALOG
+POSE = 1
+FACE = 6
+FRAME = 0
+「また会おうね！」
+END_DIALOG
+
+SET_NEXT_SCENE
+NEXT_SCENE = 0
+
+END_ENDROLL_SCENE_DIALOG
+
+END_SCRIPT
